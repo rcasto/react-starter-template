@@ -1,5 +1,5 @@
 angular
-    .module('app', [])
-    .controller('AppController', function ($scope) {
-        $scope.testData = 'Blah blah blah testing testing testing...';
+    .module('app', ['react-app'])
+    .controller('AppController', function ($scope, testService) {
+        $scope.testData = testService.getTestData();
     });

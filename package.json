@@ -2,7 +2,9 @@
   "name": "angular-react",
   "version": "1.0.0",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
   "keywords": [],
   "author": "Richie Casto",
   "license": "ISC",
