@@ -1,7 +1,7 @@
 import { react2angular } from 'react2angular';
 
-import TestService from './testService';
-import TestComponent from './testComponent';
+import TestService from '../services/testService';
+import TestComponent from '../components/testComponent';
 
 // Hook up to AngularJS application
 export function bootStrap() {
