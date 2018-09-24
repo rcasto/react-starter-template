@@ -3,8 +3,8 @@ import { render } from 'react-dom';
 import TestComponent from '../components/testComponent';
 
 // Setup a separate react app on the page
-export function bootStrap() {
-    const domContainer = document.querySelector('.react-container');
+export function bootStrap(selector) {
+    const domContainer = document.querySelector(selector);
     render(createElement(TestComponent, {
         source: 'react'
     }), domContainer);
