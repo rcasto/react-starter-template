@@ -1,13 +1,8 @@
-import { createElement } from 'react';
-import { render } from 'react-dom';
-import CountButton from './testComponent';
-import { bootStrap } from './angularAppBootstrap';
+import { bootStrap as AngularBootStrap } from './angularAppBootstrap';
+import { bootStrap as ReactBootStrap } from './reactAppBootstrap';
 
 // Setup a separate react app on the page
-const domContainer = document.querySelector('.react-container');
-render(createElement(CountButton, {
-    source: 'react'
-}), domContainer);
+ReactBootStrap();
 
 // Hook up to angular app
-bootStrap();
+AngularBootStrap();
