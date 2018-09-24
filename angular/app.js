@@ -5,6 +5,6 @@ angular
     })
     .service('angularService', function () {
         this.testAngularMethod = function () {
-            return 'angularjs service called';
+            return 'Successfully called angularjs service!';
         };
     });

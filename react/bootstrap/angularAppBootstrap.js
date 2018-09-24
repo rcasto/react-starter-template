@@ -8,5 +8,5 @@ export function bootStrap() {
     angular
         .module('react-app', [])
         .service('testService', TestService)
-        .component('testComponent', react2angular(TestComponent, ['source']));
+        .component('testComponent', react2angular(TestComponent, ['source'], ['angularService']));
 }
