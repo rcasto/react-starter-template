@@ -13,6 +13,15 @@ module.exports = {
             test: /\.css$/,
             // applied last to first (right to left)
             use: [ 'style-loader', 'css-loader' ]
+        }, {
+            test: /\.m?js$/,
+            exclude: /(node_modules|bower_components|dist)/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            }
         }]
     }
 };
