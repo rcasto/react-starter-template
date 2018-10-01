@@ -1,5 +1,5 @@
 {
-  "name": "angularjs-react",
+  "name": "react-components",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react2angular": "^4.0.4"
+    "react-dom": "^16.5.2"
   }
 }

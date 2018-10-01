@@ -1,8 +1,9 @@
-import { bootStrap as AngularBootStrap } from './bootstrap/angularAppBootstrap';
-import { bootStrap as ReactBootStrap } from './bootstrap/reactAppBootstrap';
+import { createElement } from 'react';
+import { render } from 'react-dom';
+import TestComponent from './components/testComponent';
 
 // Setup a separate react app on the page
-ReactBootStrap('.react-container');
-
-// Hook up to angular app
-AngularBootStrap('react-app');
+const domContainer = document.querySelector('.react-container');
+render(createElement(TestComponent, {
+    source: 'react'
+}), domContainer);

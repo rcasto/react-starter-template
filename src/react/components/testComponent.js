@@ -12,7 +12,7 @@ export default class TestComponent extends Component {
             'div',
             null,
             `Powered by ${this.props.source}`
-        )
+        );
         const countButton = createElement(
             'button',
             {
@@ -21,17 +21,11 @@ export default class TestComponent extends Component {
             },
             `${this.state.clicks} click${this.state.clicks === 1 ? '' : 's'}`
         );
-        const testAngularServiceContainer = createElement(
-            'div',
-            null,
-            `Test Angular Service: ${this.props.angularService && this.props.angularService.testAngularMethod()}`
-        );
         return createElement(
             'div',
             null,
             sourceInfoContainer,
-            countButton,
-            testAngularServiceContainer
+            countButton
           );
     }
 }

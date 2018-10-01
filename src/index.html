@@ -3,21 +3,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AngularReact</title>
+    <title>React Components</title>
 </head>
-<body ng-app="app">
+<body>
     <div class="react-container">
         <div>React App</div>
     </div>
 
-    <div ng-controller="AppController">
-        <div>Test data should appear below</div>
-        <div>{{ testData }}</div>
-        <test-component source="'angular'"></test-component>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js" crossorigin></script>
     <script src="../dist/react.app.js"></script>
-    <script src="./angular/app.js"></script>
 </body>
 </html>
