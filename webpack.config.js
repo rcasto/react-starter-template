@@ -6,7 +6,7 @@ module.exports = {
     entry: './src/react/react.app.js',
     output: {
         filename: 'react.app.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist', 'public')
     },
     module: {
         rules: [{
