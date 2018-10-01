@@ -1,0 +1,9 @@
+.test-component {
+    background-color: lawngreen;
+}
+.test-component .source-info {
+    background-color: red;
+}
+.test-component button {
+    color: aqua;
+}

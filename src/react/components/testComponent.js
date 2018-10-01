@@ -1,4 +1,5 @@
 import { createElement, Component } from 'react';
+import './testComponent.css';
 
 export default class TestComponent extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ export default class TestComponent extends Component {
     render() {
         const sourceInfoContainer = createElement(
             'div',
-            null,
+            { className: 'source-info' },
             `Powered by ${this.props.source}`
         );
         const countButton = createElement(
@@ -23,7 +24,7 @@ export default class TestComponent extends Component {
         );
         return createElement(
             'div',
-            null,
+            { className: 'test-component' },
             sourceInfoContainer,
             countButton
           );
