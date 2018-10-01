@@ -1,9 +1,9 @@
-.test-component {
+.app {
     background-color: lawngreen;
 }
-.test-component .source-info {
+.app .source-info {
     background-color: red;
 }
-.test-component button {
+.app button {
     color: aqua;
 }

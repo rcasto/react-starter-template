@@ -1,7 +1,12 @@
 import { createElement, Component } from 'react';
-import './testComponent.css';
+import './app.css';
 
-export default class TestComponent extends Component {
+const classNames = {
+    sourceInfo: 'source-info',
+    appContainer: 'app'
+};
+
+export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -11,7 +16,7 @@ export default class TestComponent extends Component {
     render() {
         const sourceInfoContainer = createElement(
             'div',
-            { className: 'source-info' },
+            { className: classNames.sourceInfo },
             `Powered by ${this.props.source}`
         );
         const countButton = createElement(
@@ -24,7 +29,7 @@ export default class TestComponent extends Component {
         );
         return createElement(
             'div',
-            { className: 'test-component' },
+            { className: classNames.appContainer },
             sourceInfoContainer,
             countButton
           );
