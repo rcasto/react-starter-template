@@ -1,37 +1,23 @@
 import { createElement, Component } from 'react';
+import Header from './header/header';
 import './app.css';
-
-const classNames = {
-    sourceInfo: 'source-info',
-    appContainer: 'app'
-};
 
 export default class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            clicks: 0
-        };
     }
     render() {
-        const sourceInfoContainer = createElement(
-            'div',
-            { className: classNames.sourceInfo },
-            `Powered by ${this.props.source}`
-        );
-        const countButton = createElement(
-            'button',
-            {
-                onClick: () =>
-                    this.setState({ clicks: this.state.clicks + 1 })
-            },
-            `${this.state.clicks} click${this.state.clicks === 1 ? '' : 's'}`
-        );
+        var testElem = createElement('span', null, 'Testing app bootstrap with header');
+        var headerElem = createElement(Header, {
+            iconSrc: this.props.iconSrc
+        });
         return createElement(
             'div',
-            { className: classNames.appContainer },
-            sourceInfoContainer,
-            countButton
+            { 
+                className: 'app'
+            },
+            headerElem,
+            testElem
           );
     }
 }
