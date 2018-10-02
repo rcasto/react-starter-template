@@ -28,11 +28,14 @@ export default class StockCards extends Component {
                     onClick: () => this.removeSymbol(symbol)
                 }, removeButtonEntity);
                 let stockCardContainer = createElement('div', {
-                    key: symbol
+                    key: symbol,
+                    className: 'stock-cards-list-item'
                 }, removeSymbolButton, stockCard);
                 return stockCardContainer;
             });
-        var stockCardsContainer = createElement('div', null, stockCards);
+        var stockCardsContainer = createElement('div', {
+            className: 'stock-cards-list'
+        }, stockCards);
         return stockCardsContainer;
     }
 }
