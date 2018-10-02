@@ -1,5 +1,5 @@
 import { createElement, Component } from 'react';
-import Header from '../header/header';
+import StockCards from '../stockCards/stockCards';
 import './app.css';
 
 export default class App extends Component {
@@ -7,17 +7,15 @@ export default class App extends Component {
         super(props);
     }
     render() {
-        var testElem = createElement('span', null, 'Testing app bootstrap with header');
-        var headerElem = createElement(Header, {
-            iconSrc: this.props.iconSrc
+        var stockCards = createElement(StockCards, {
+            symbols: this.props.symbols
         });
         return createElement(
             'div',
             { 
                 className: 'app'
             },
-            headerElem,
-            testElem
+            stockCards
           );
     }
 }
