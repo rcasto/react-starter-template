@@ -1,6 +1,6 @@
 import { createElement } from 'react';
 import { render } from 'react-dom';
-import App from './components/app';
+import App from './components/app/app';
 
 export function bootstrap(selector, appState) {
     const domContainer = document.querySelector(selector);

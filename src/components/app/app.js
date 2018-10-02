@@ -1,5 +1,5 @@
 import { createElement, Component } from 'react';
-import Header from './header/header';
+import Header from '../header/header';
 import './app.css';
 
 export default class App extends Component {

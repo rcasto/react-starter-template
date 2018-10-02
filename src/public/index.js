@@ -1,4 +1,4 @@
-import { bootstrap } from './appBootstrap';
+import { bootstrap } from '../appBootstrap';
 import './index.css';
 
 bootstrap('.react-container', {
