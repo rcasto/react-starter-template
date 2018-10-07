@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'development',
     devtool: 'inline-source-map',
     entry: './src/public/index.js',
     output: {
@@ -18,9 +19,9 @@ module.exports = {
         }, {
             test: /\.scss$/,
             use: [
-                "style-loader", // creates style nodes from JS strings
-                "css-loader", // translates CSS into CommonJS
-                "sass-loader" // compiles Sass to CSS, using Node Sass by default
+                'style-loader', // creates style nodes from JS strings
+                'css-loader', // translates CSS into CommonJS
+                'sass-loader' // compiles Sass to CSS, using Node Sass by default
             ]
         }, {
             test: /\.m?js$/,

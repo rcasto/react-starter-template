@@ -1,6 +1,6 @@
 import { createElement, Component } from 'react';
 import StockCard from '../stockCard/stockCard';
-import './stockCards.css';
+import './stockCards.scss';
 
 const removeButtonEntity = String.fromCharCode(8855);
 

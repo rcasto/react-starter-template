@@ -1,6 +1,6 @@
 import { createElement, Component } from 'react';
 import { getQuoteForSymbol } from '../../services/iexService';
-import './stockCard.css';
+import './stockCard.scss';
 
 const quoteUpdateIntervalInMs = 15000;
 

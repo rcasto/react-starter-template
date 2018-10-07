@@ -1,6 +1,6 @@
 import { createElement, Component } from 'react';
 import StockCards from '../stockCards/stockCards';
-import './app.css';
+import './app.scss';
 
 export default class App extends Component {
     constructor(props) {
