@@ -1,0 +1,4 @@
+.stock-card {
+    display: flex;
+    flex-direction: column;
+}
