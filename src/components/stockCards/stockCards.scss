@@ -1,0 +1,19 @@
+.stock-cards-list .stock-cards-list-item {
+    display: flex;
+    padding: 4px;
+    border: 1px solid black;
+    margin-bottom: 4px;
+
+    button {
+        width: 48px;
+        height: 48px;
+        margin-left: auto;
+    }
+
+    &:nth-child(odd) {
+        background-color: #BDC3C7;
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
