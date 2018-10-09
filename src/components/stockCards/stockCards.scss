@@ -7,7 +7,9 @@
     button {
         width: 48px;
         height: 48px;
+        line-height: 48px;
         margin-left: auto;
+        align-self: center;
     }
 
     &:nth-child(odd) {
