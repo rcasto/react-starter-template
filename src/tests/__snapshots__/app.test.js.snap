@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Can initialize application component 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="stock-cards-test"
+  >
+    Stock Cards Component
+  </div>
+</div>
+`;

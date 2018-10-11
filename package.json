@@ -2,6 +2,11 @@
   "name": "react-components",
   "version": "1.0.0",
   "description": "",
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>/src/tests/__mocks__/styleMock.js"
+    }
+  },
   "scripts": {
     "build": "npm-run-all clean --parallel build:html build:webpack",
     "build:html": "cpy src/public/*.html dist/public",
@@ -16,6 +21,7 @@
     "start": "node server.js",
     "start:dev": "npm-run-all build-dev --parallel watch-dev start",
     "start:prod": "npm-run-all build --parallel watch start",
+    "test": "jest",
     "clean": "rimraf dist",
     "clean:all": "rimraf dist node_modules"
   },
@@ -25,12 +31,17 @@
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "chokidar-cli": "^1.2.1",
     "cpy-cli": "^2.0.0",
     "css-loader": "^1.0.0",
+    "jest": "^23.6.0",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",
+    "react-test-renderer": "^16.5.2",
+    "regenerator-runtime": "^0.12.1",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
