@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Can initialize application component 1`] = `
+exports[`can initialize application component 1`] = `
 <div
   className="app"
 >

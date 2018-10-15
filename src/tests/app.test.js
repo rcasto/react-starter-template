@@ -1,5 +1,5 @@
 import { createElement } from 'react';
-import renderer from 'react-test-renderer';
+import TestRenderer from 'react-test-renderer';
 import App from '../components/app/app';
 import StockCards from '../components/stockCards/stockCards';
 
@@ -19,13 +19,13 @@ beforeEach(() => {
     StockCards.mockClear();
 });
 
-test('Can initialize application component', () => {
+test('can initialize application component', () => {
     const symbols = ['MSFT', 'AAPL'];
     const component = createElement(App, {
         symbols
     });
-    const renderedComponent = renderer.create(component);
-    let tree = renderedComponent.toJSON();
+    const testRenderer = TestRenderer.create(component);
+    let tree = testRenderer.toJSON();
 
     expect(tree).toMatchSnapshot();
     expect(StockCards.mock.calls.length).toEqual(1);
