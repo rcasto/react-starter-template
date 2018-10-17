@@ -1,36 +1,36 @@
-import { createElement, Component } from 'react';
+import React from 'react';
 import StockCard from '../stockCard/stockCard';
 import './stockCards.scss';
 
 const removeButtonEntity = String.fromCharCode(8855);
 
-export default class StockCards extends Component {
+export default class StockCards extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
         var stockCards = (this.props.symbols || [])
-            .map(symbol => {
-                let stockCard = createElement(StockCard, {
-                    symbol
-                });
-                let removeSymbolButton = createElement('button', {
-                    onClick: () => this.props.handleRemoveSymbol(symbol)
-                }, removeButtonEntity);
-                let stockCardContainer = createElement('div', {
-                    key: symbol,
-                    className: 'stock-cards-list-item'
-                }, stockCard, removeSymbolButton);
-                return stockCardContainer;
-            });
+            .map(symbol => (
+                    <div
+                        className='stock-cards-list-item'
+                        key={symbol}>
+                        <StockCard symbol={symbol}></StockCard>
+                        <button onClick={() => this.props.handleRemoveSymbol(symbol)}>
+                            {removeButtonEntity}
+                        </button>
+                    </div>
+            ));
         // Display no stock cards message
         // if in fact there are no stock cards
         if (stockCards.length === 0) {
-            stockCards = createElement('div', null, 'No stock symbols selected');
+            return (
+                <div>No stock symbols selected</div>
+            );
         }
-        var stockCardsContainer = createElement('div', {
-            className: 'stock-cards-list'
-        }, stockCards);
-        return stockCardsContainer;
+        return (
+            <div className='stock-cards-list'>
+                {stockCards}
+            </div>
+        );
     }
 }

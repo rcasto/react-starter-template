@@ -1,8 +1,8 @@
-import { createElement, Component } from 'react';
+import React from 'react';
 import StockCards from '../stockCards/stockCards';
 import './app.scss';
 
-export default class App extends Component {
+export default class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,16 +18,13 @@ export default class App extends Component {
         });
     }
     render() {
-        var stockCards = createElement(StockCards, {
-            symbols: this.state.symbols,
-            handleRemoveSymbol: this.handleRemoveSymbol.bind(this)
-        });
-        return createElement(
-            'div',
-            { 
-                className: 'app'
-            },
-            stockCards
-          );
+        return (
+            <div className='app'>
+                <StockCards
+                    symbols={this.state.symbols} 
+                    handleRemoveSymbol={this.handleRemoveSymbol.bind(this)}>
+                </StockCards>
+            </div>
+        );
     }
 }

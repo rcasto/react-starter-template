@@ -1,10 +1,10 @@
-import { createElement, Component } from 'react';
+import React from 'react';
 import { getQuoteForSymbol } from '../../services/iexService';
 import './stockCard.scss';
 
 const quoteUpdateIntervalInMs = 15000;
 
-export default class StockCard extends Component {
+export default class StockCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -31,17 +31,21 @@ export default class StockCard extends Component {
     }
     render() {
         if (this.state.hasError) {
-            return createElement('div', null, `Error fetching stock data for ${this.props.symbol}`);
+            return (
+                <div>Error fetching stock data for ${this.props.symbol}</div>
+            );
         }
         if (!this.state.quote) {
-            return createElement('div', null, 'Loading...');
+            return (
+                <div>Loading...</div>
+            );
         }
         let quote = this.state.quote;
-        let stockSymbolName = createElement('div', null, `${quote.symbol} - ${quote.companyName}`);
-        let latestStockPrice = createElement('div', null, `${quote.latestPrice} (${quote.change})`);
-        let stockCardContainer = createElement('div', {
-            className: 'stock-card'
-        }, stockSymbolName, latestStockPrice);
-        return stockCardContainer;
+        return (
+            <div className='stock-card'>
+                <div>{quote.symbol} - {quote.companyName}</div>
+                <div>{quote.latestPrice} ({quote.change})</div>
+            </div>
+        );
     }
 }
